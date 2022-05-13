@@ -199,6 +199,11 @@ body {
   background-color: antiquewhite;
 }
 
+.toggle-label:active .toggle {
+  border-color: gray;
+  background-color: gray;
+}
+
 #first-input:checked~.toggles-wrapper .first-toggle {
   background-color: transparent;
 }
