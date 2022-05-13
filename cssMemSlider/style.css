@@ -174,8 +174,8 @@ body {
 }
 
 .toggle-label {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.4em;
+  height: 1.4em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,8 +187,8 @@ body {
 }
 
 .toggle {
-  width: 1em;
-  height: 1em;
+  width: 0.8em;
+  height: 0.8em;
   box-sizing: border-box;
   border: 3px solid goldenrod;
   border-radius: 50%;
