@@ -12,7 +12,7 @@
 <body>
 
   <div class="slider">
-    <input class="input" id="first-input" type="radio" name="slider">
+    <input class="input" id="first-input" type="radio" name="slider" checked>
     <input class="input" id="second-input" type="radio" name="slider">
     <input class="input" id="third-input" type="radio" name="slider">
     <input class="input" id="fourth-input" type="radio" name="slider">
@@ -28,19 +28,29 @@
     </div>
     <div class="descriptions-wrapper">
       <div class="descriptions-container">
-        <p>котик ищет твои баги</p>
-        <p>...или только что пришел в RS-School</p>
-        <p>твой тоже??</p>
-        <p>когда сверстал свою первую страничку)</p>
-        <p>твой собес, если будешь плохо учиться в RS-School</p>
+        <p class="descriptions-text">котик ищет твои баги</p>
+        <p class="descriptions-text">...или только что пришел в RS-School</p>
+        <p class="descriptions-text">твой тоже??</p>
+        <p class="descriptions-text">когда сверстал свою первую страничку)</p>
+        <p class="descriptions-text">твой собес, если будешь плохо учиться в RS-School</p>
       </div>
     </div>
-    <div class="label-wrapper">
-      <label for="first-input">111</label>
-      <label for="second-input">222</label>
-      <label for="third-input">333</label>
-      <label for="fourth-input">444</label>
-      <label for="fifth-input">555</label>
+    <div class="toggles-wrapper">
+      <label class="toggle-label" for="first-input">
+        <div class="toggle first-toggle"></div>
+      </label>
+      <label class="toggle-label" for="second-input">
+        <div class="toggle second-toggle"></div>
+      </label>
+      <label class="toggle-label" for="third-input">
+        <div class="toggle third-toggle"></div>
+      </label>
+      <label class="toggle-label" for="fourth-input">
+        <div class="toggle fourth-toggle"></div>
+      </label>
+      <label class="toggle-label" for="fifth-input">
+        <div class="toggle fifth-toggle"></div>
+      </label>
     </div>
   </div>
 
