@@ -1,0 +1,219 @@
+body {
+  margin: 0;
+  padding-top: 1.5rem;
+  height: 100vh;
+  min-width: 320px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  background-image: url("./img/bumaga-karton-logotipy.jpg");
+  background-size: cover;
+  background-position: center center;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    align-items: center;
+  }
+}
+
+
+/* slider */
+
+.slider {
+  box-sizing: border-box;
+  width: 80%;
+  height: 75vh;
+
+  padding: 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  row-gap: 1.4rem;
+
+  background-color: rgba(31, 145, 181, 0.95);     
+  border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+  .slider {
+    height: 60vh;
+    padding: 0.6rem;
+  }
+}
+
+
+/* images */
+
+.images-wrapper {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  overflow: hidden;
+
+  display: flex;
+}
+
+.images-container {
+  flex-shrink: 0;
+
+  display: flex;
+  width: 500%;
+
+  transition: transform 1.5s;
+}
+
+.mem-img {
+  display: block;
+  width: 20%;
+  object-fit: contain;
+}
+
+
+/* descriptions */
+
+.descriptions-wrapper {
+  overflow: hidden;
+  grid-column: 1 / 2;
+}
+
+@media (max-width: 768px) {
+  .descriptions-wrapper {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+}
+
+.descriptions-container {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+  width: 500%;
+
+  transition: transform 1.5s;
+}
+
+.descriptions-text {
+  text-align: center;
+  color: #e4bf2e;
+  font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+  .descriptions-text {
+    margin-top: 0;
+  }
+}
+
+
+/* input */
+
+.input {
+  width: 0;
+  height: 0;
+  margin: 0;
+  visibility: hidden;
+  overflow: hidden;
+
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+#first-input:checked~.images-wrapper .images-container,
+#first-input:checked~.descriptions-wrapper .descriptions-container {
+  transform: translate(0%);
+}
+
+#second-input:checked~.images-wrapper .images-container,
+#second-input:checked~.descriptions-wrapper .descriptions-container {
+  transform: translate(-20%);
+}
+
+#third-input:checked~.images-wrapper .images-container,
+#third-input:checked~.descriptions-wrapper .descriptions-container {
+  transform: translate(-40%);
+}
+
+#fourth-input:checked~.images-wrapper .images-container,
+#fourth-input:checked~.descriptions-wrapper .descriptions-container {
+  transform: translate(-60%);
+}
+
+#fifth-input:checked~.images-wrapper .images-container,
+#fifth-input:checked~.descriptions-wrapper .descriptions-container {
+  transform: translate(-80%);
+}
+
+
+/* toggles */
+
+.toggles-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .toggles-wrapper {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+}
+
+.toggle-label {
+  width: 1.4em;
+  height: 1.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.toggle-label+.toggle-label {
+  margin-left: 0.25rem;
+}
+
+.toggle {
+  width: 0.8em;
+  height: 0.8em;
+  box-sizing: border-box;
+  border: 0.2rem solid goldenrod;
+  border-radius: 50%;
+  background-color: goldenrod;
+}
+
+.toggle-label:hover .toggle {
+  border-color: antiquewhite;
+  background-color: antiquewhite;
+}
+
+.toggle-label:active .toggle {
+  border-color: gray;
+  background-color: gray;
+}
+
+#first-input:checked~.toggles-wrapper .first-toggle {
+  background-color: transparent;
+}
+
+#second-input:checked~.toggles-wrapper .second-toggle {
+  background-color: transparent;
+}
+
+#third-input:checked~.toggles-wrapper .third-toggle {
+  background-color: transparent;
+}
+
+#fourth-input:checked~.toggles-wrapper .fourth-toggle {
+  background-color: transparent;
+}
+
+#fifth-input:checked~.toggles-wrapper .fifth-toggle {
+  background-color: transparent;
+}
