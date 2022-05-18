@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding-top: 25px;
+  padding-top: 1.5rem;
   height: 100vh;
   min-width: 320px;
   box-sizing: border-box;
@@ -13,7 +13,7 @@ body {
   background-position: center center;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -29,20 +29,21 @@ body {
 .slider {
   box-sizing: border-box;
   width: 80%;
+  height: 75vh;
 
-  padding: 20px 50px;
+  padding: 1.5rem 3rem;
   display: grid;
   grid-template-columns: 80% 20%;
-  row-gap: 20px;
+  row-gap: 1.4rem;
 
   background-color: rgba(31, 145, 181, 0.95);     
-  border-radius: 25px;
+  border-radius: 1rem;
 }
 
 @media (max-width: 768px) {
   .slider {
-    padding: 10px;
-    margin-top: -65px;
+    height: 60vh;
+    padding: 0.6rem;
   }
 }
 
@@ -53,14 +54,14 @@ body {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   overflow: hidden;
+
+  display: flex;
 }
 
 .images-container {
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
-  align-items: center;
+  flex-shrink: 0;
+
+  display: flex;
   width: 500%;
 
   transition: transform 1.5s;
@@ -68,15 +69,8 @@ body {
 
 .mem-img {
   display: block;
-  width: 95%;
-  height: 65vh;
+  width: 20%;
   object-fit: contain;
-}
-
-@media (max-width: 768px) {
-  .mem-img {
-    height: 45vh;
-  }
 }
 
 
@@ -182,14 +176,14 @@ body {
 }
 
 .toggle-label+.toggle-label {
-  margin-left: 4px;
+  margin-left: 0.25rem;
 }
 
 .toggle {
   width: 0.8em;
   height: 0.8em;
   box-sizing: border-box;
-  border: 3px solid goldenrod;
+  border: 0.2rem solid goldenrod;
   border-radius: 50%;
   background-color: goldenrod;
 }
